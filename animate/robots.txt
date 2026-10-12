@@ -1,0 +1,4 @@
+# Review edition: noindex,follow is set in HTML.
+# This project-prefix file does not control the host root robots.txt.
+User-agent: *
+Allow: /arttime-c1-collector-salon/
