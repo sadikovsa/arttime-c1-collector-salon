@@ -103,7 +103,9 @@
   const params = new URLSearchParams(location.search);
   let category = filters.some(b => b.dataset.filter === params.get('category')) ? params.get('category') : 'Все';
   search.value = params.get('q') || '';
+  const filterMotion = window.ArtTimeFilterMotion.create(cards, {isPaused: () => paused});
   const filterProducts = (updateURL = true) => {
+    const filterSnapshot = updateURL ? filterMotion.capture() : null;
     const query = search.value.trim().toLocaleLowerCase('ru');
     let count = 0;
     cards.forEach((card,index) => {
@@ -125,6 +127,7 @@
       query ? url.searchParams.set('q',search.value.trim()) : url.searchParams.delete('q');
       history.replaceState(null,'',url);
     }
+    filterMotion.play(filterSnapshot);
   };
   filters.forEach(button => button.addEventListener('click',() => {category=button.dataset.filter;filterProducts();}));
   search.addEventListener('input',event => {if(!event.isComposing)filterProducts();});
@@ -389,20 +392,27 @@
   new ResizeObserver(checkTextRoom).observe(heroCopy);
   configureMotion();
   // Material opens over the already presented photo; image and tasks are never hidden or delayed.
-  const openVitrine=()=>requestAnimationFrame(()=>{
-    if(!motionAllowed() || scrollY>20)return;
-    const material=$('.hero-material'),duration=narrow.matches?520:680;
+  let vitrineRequest = 0;
+  const openVitrine=request=>requestAnimationFrame(()=>{
+    if(request !== vitrineRequest || !motionAllowed() || scrollY>20)return;
+    $$('.vitrine-leaf').forEach(leaf => {cancelMotion(leaf);leaf.remove();});
+    const material=$('.hero-material'),duration=narrow.matches?850:1100;
     animate(material,[{clipPath:'inset(1.5% 1.5% 1.5% 1.5%)'},{clipPath:'inset(0 0 0 0)'}],duration);
     [-1,1].forEach(direction=>{
       const leaf=document.createElement('div');leaf.className=`vitrine-leaf vitrine-leaf--${direction<0?'left':'right'}`;leaf.setAttribute('aria-hidden','true');$('.hero-visual').append(leaf);
-      animate(leaf,[{transform:'translateX(0)',opacity:.36},{transform:`translateX(${direction*110}%)`,opacity:0}],duration,()=>leaf.remove());
+      animate(leaf,[{transform:'translateX(0)',opacity:1},{transform:`translateX(${direction*110}%)`,opacity:0}],duration,()=>leaf.remove());
     });
   });
   // Wait only for decorative paint readiness; the photo and task are never gated.
   const presentVitrine = () => {
+    const request = ++vitrineRequest;
     const ready = photo.decode ? photo.decode().catch(() => {}) : Promise.resolve();
-    ready.then(() => requestAnimationFrame(openVitrine));
+    ready.then(() => requestAnimationFrame(() => openVitrine(request)));
   };
+  const replay = $('[data-vitrine-replay]');
+  replay.hidden = false; replay.disabled = reduced.matches;
+  reduced.addEventListener('change',()=>{replay.disabled = reduced.matches;});
+  replay.addEventListener('click',()=>{if(reduced.matches)return;if(paused)motionButton.click();scrollTo({top:sceneTop,behavior:'instant'});geometry();scheduleScene();presentVitrine();});
   if(photo.complete && photo.naturalWidth)presentVitrine();
   else photo.addEventListener('load',presentVitrine,{once:true});
 })();

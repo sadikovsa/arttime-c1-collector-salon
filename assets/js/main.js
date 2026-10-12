@@ -81,7 +81,9 @@
   const params = new URLSearchParams(location.search);
   let category = filters.some(b => b.dataset.filter === params.get('category')) ? params.get('category') : 'Все';
   search.value = params.get('q') || '';
+  const filterMotion = window.ArtTimeFilterMotion.create(cards, {isPaused: () => paused});
   const filterProducts = (updateURL = true) => {
+    const filterSnapshot = updateURL ? filterMotion.capture() : null;
     const query = search.value.trim().toLocaleLowerCase('ru');
     let count = 0;
     cards.forEach((card,index) => {
@@ -101,6 +103,7 @@
       query ? url.searchParams.set('q',search.value.trim()) : url.searchParams.delete('q');
       history.replaceState(null,'',url);
     }
+    filterMotion.play(filterSnapshot);
   };
   filters.forEach(button => button.addEventListener('click',() => {category=button.dataset.filter;filterProducts();}));
   search.addEventListener('input',event => {if(!event.isComposing)filterProducts();});

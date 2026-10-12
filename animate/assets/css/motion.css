@@ -19,3 +19,9 @@
 /* Intrinsic words may wrap when text grows, including narrow editorial columns. */
 .selection-panel h3,.selection-panel p,.gallery-item h3,.gallery-item p,.inspiration-top h3,.section-top h2,.faq-intro h2,.summary-title,.product-category,.product-meta,.request-status,.request-note,.eyebrow{overflow-wrap:anywhere}
 .regenerate[hidden]{display:none}
+
+/* Visible glass leaves open over the photo, independently of scroll. */
+.vitrine-leaf{background:linear-gradient(110deg,rgba(28,9,6,.58),rgba(244,233,207,.32) 42%,rgba(66,20,16,.65));border-inline:1px solid rgba(244,233,207,.7)}
+@media(min-width:768px){.vitrine-leaf{width:29%}.vitrine-leaf--left{left:42%}.vitrine-leaf--right{right:0}}
+
+.scene-controls{flex-wrap:wrap;right:var(--gutter)}.vitrine-replay{white-space:nowrap}
