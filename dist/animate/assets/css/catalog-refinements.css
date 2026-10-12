@@ -1,0 +1,10 @@
+/* Filter state is immediate; card motion owns transform/opacity only. */
+.catalog-grid,.product-grid,.products-grid{position:relative;overflow-anchor:none}
+.filter-exits{position:absolute;inset:0;pointer-events:none;z-index:2}
+.filter-exits *{pointer-events:none!important}
+.inspiration-grid,.inspirations-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.inspiration-grid>.gallery-item,.inspirations-grid>.case{grid-column:auto;min-width:0}
+.inspiration-grid>.gallery-item{display:block}
+.inspiration-grid>.gallery-item figcaption{padding-top:18px}
+.inspiration-grid>.gallery-item .gallery-image img{aspect-ratio:4/3}
+@media(max-width:767px){.inspiration-grid,.inspirations-grid{grid-template-columns:1fr}}
