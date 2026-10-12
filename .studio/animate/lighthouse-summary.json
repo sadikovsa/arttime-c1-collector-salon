@@ -1,0 +1,79 @@
+{
+  "limitations": "Headless Chromium; simulated throttling, not a physical device. No measured INP.",
+  "results": [
+    {
+      "mode": "mobile",
+      "outsideLoopback": false,
+      "chromiumSandbox": false,
+      "fetchTime": "2026-10-12T11:36:41.770Z",
+      "requestedUrl": "http://127.0.0.1:8798/",
+      "finalDisplayedUrl": "http://127.0.0.1:8798/",
+      "runtimeError": null,
+      "warnings": [],
+      "categories": {
+        "performance": 72,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "LCP": {
+        "value": 6468.4656,
+        "unit": "millisecond"
+      },
+      "CLS": {
+        "value": 0.0001402692329667215,
+        "unit": "unitless"
+      },
+      "TBT": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "INP": {
+        "value": null,
+        "status": "НЕ ИЗМЕРЕНО: requires real interactions/field data"
+      },
+      "INP_proxy": {
+        "value": 0,
+        "unit": "millisecond",
+        "label": "TBT laboratory responsiveness proxy; not INP"
+      }
+    },
+    {
+      "mode": "desktop",
+      "outsideLoopback": false,
+      "chromiumSandbox": false,
+      "fetchTime": "2026-10-12T11:36:49.848Z",
+      "requestedUrl": "http://127.0.0.1:8798/",
+      "finalDisplayedUrl": "http://127.0.0.1:8798/",
+      "runtimeError": null,
+      "warnings": [],
+      "categories": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "LCP": {
+        "value": 1322.0381499999999,
+        "unit": "millisecond"
+      },
+      "CLS": {
+        "value": 0.000003093060785368478,
+        "unit": "unitless"
+      },
+      "TBT": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "INP": {
+        "value": null,
+        "status": "НЕ ИЗМЕРЕНО: requires real interactions/field data"
+      },
+      "INP_proxy": {
+        "value": 0,
+        "unit": "millisecond",
+        "label": "TBT laboratory responsiveness proxy; not INP"
+      }
+    }
+  ]
+}

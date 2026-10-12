@@ -1,0 +1,5 @@
+:root {
+ --paper:#f0eae1; --paper-light:#f8f4ed; --stone:#e4dccf; --wine:#390b0a; --wine-light:#622a23; --ink:#2e271f; --muted:#655c51; --line:#c8bdac; --white:#fffaf1;
+ --font-display:'Cormorant','Georgia',serif; --font-body:'Manrope',Arial,sans-serif;
+ --content:1200px; --gutter:clamp(22px,4.5vw,72px); --space-section:clamp(64px,8vw,120px); --ease:cubic-bezier(.22,.61,.36,1); --disclosure:270ms; --focus:#b5723b;
+}

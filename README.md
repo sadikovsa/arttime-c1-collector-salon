@@ -11,3 +11,9 @@ Product sharing opens the selected item using `?product=<id>#catalog`. Request t
 This client design alternative uses `noindex,follow`. Metadata uses its own Pages project URL. `robots.txt` in a project directory does not control the GitHub host root. Original native checkpoint is preserved in Git history; `.openai` deployment identity is removed from this distribution.
 
 SEO/QA evidence: `.studio/`. All three final source snapshots and full release evidence are archived in the private Codex Studio case.
+
+## Animated S1 edition
+
+[Open Impeccable animate edition](https://sadikovsa.github.io/arttime-c1-collector-salon/animate/). [Compare original](https://sadikovsa.github.io/arttime-c1-collector-salon/).
+
+Scoped glass-vitrine entrance, photo continuity and gallery transitions; original root retained byte-for-byte. Motion/QA/review evidence summaries are in `.studio/animate/`. Full browser artifacts and baseline critique are preserved in the private Studio archive.

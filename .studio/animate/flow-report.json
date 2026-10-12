@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "arttime-c1-collector-salon-animate",
+    "checks": [
+      {
+        "motionNativeWheel": true,
+        "states": [
+          {
+            "scrollY": 0,
+            "progress": "0.000",
+            "imgs": [
+              "matrix(1.04, 0, 0, 1.04, 259.2, 0)"
+            ],
+            "opacity": [
+              "1"
+            ]
+          },
+          {
+            "scrollY": 300,
+            "progress": "0.303",
+            "imgs": [
+              "matrix(1.02788, 0, 0, 1.02788, 180.655, 0)"
+            ],
+            "opacity": [
+              "0.333333"
+            ]
+          },
+          {
+            "scrollY": 650,
+            "progress": "0.657",
+            "imgs": [
+              "matrix(1.01374, 0, 0, 1.01374, 89.0182, 0)"
+            ],
+            "opacity": [
+              "0"
+            ]
+          },
+          {
+            "scrollY": 1050,
+            "progress": "1.000",
+            "imgs": [
+              "matrix(1, 0, 0, 1, 0, 0)"
+            ],
+            "opacity": [
+              "0"
+            ]
+          },
+          {
+            "scrollY": 700,
+            "progress": "0.707",
+            "imgs": [
+              "matrix(1.01172, 0, 0, 1.01172, 75.9273, 0)"
+            ],
+            "opacity": [
+              "0"
+            ]
+          },
+          {
+            "scrollY": 300,
+            "progress": "0.303",
+            "imgs": [
+              "matrix(1.02788, 0, 0, 1.02788, 180.655, 0)"
+            ],
+            "opacity": [
+              "0.333333"
+            ]
+          },
+          {
+            "scrollY": 0,
+            "progress": "0.000",
+            "imgs": [
+              "matrix(1.04, 0, 0, 1.04, 259.2, 0)"
+            ],
+            "opacity": [
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "catalogEntries": 16,
+        "artFilter": 2,
+        "emptyAndClear": true
+      },
+      {
+        "validation": true,
+        "requestReachable": true,
+        "originalProductPhoto": true,
+        "editedTxt": true,
+        "instagramHandoff": true
+      },
+      {
+        "storage": {
+          "local": 0,
+          "session": 0
+        }
+      }
+    ],
+    "errors": []
+  }
+]
