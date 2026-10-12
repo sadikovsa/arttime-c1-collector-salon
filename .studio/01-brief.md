@@ -25,4 +25,8 @@
 
 Мокапы являются визуальными направлениями, не работающими сайтами. Реконструированные предметы и расширение интерьерной фотографии служат постановке сцены: в портфолио использовать оригинальные официальные кадры. Источники и сведения о генерации хранить внутри проекта, без публичных плашек «демо/ИИ/источники» по просьбе владельца.
 
-STATUS: WAITING_FOR_VISUAL_APPROVAL
+## Release continuation — 2026-10-12
+
+All three visual directions approved. Owner requested another completeness review, then SEO/QA and public GitHub/Pages publication. Preserve approved layouts; see 06-distribution.md for the current scoped additions.
+
+STATUS: APPROVED_FOR_RELEASE_AFTER_CHECKS
